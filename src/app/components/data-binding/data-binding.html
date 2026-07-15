@@ -1,59 +1,27 @@
-<p>data-binding works!</p>
-<table style="width: 100%">
-  <tr>
-    <td>
-      <span> Course Name: {{ courseName }}</span>
-    </td>
-    <td>
-      <input type="text" value="Rollnumber:{{ rollNumber }}" />
-    </td>
-    <td class="secondary">Today date is: {{ currentDate }}</td>
-  </tr>
-  <tr>
-    <td>
-      <input type="text" [value]="rollNumber" />
-    </td>
-    <td>
-      <input type="text" [minLength]="minTestLenght" />
-    </td>
-    <td>
-      <span [class]="spanClassname">Demo Textt</span>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      {{ rollNumber }}
-    </td>
-    <td>
-      <input type="text" [(ngModel)]="rollNumber" />
-    </td>
-    <td>
-      <input type="checkbox" [(ngModel)]="isActivee" />
-    </td>
-    <td>
-      {{ isActivee }}
-    </td>
-  </tr>
-</table>
-<br />
-<hr />
+<div (scroll)="onscroll()" style="height: 50px; overflow:screen;">
 
-<table>
-  <tr>
-    <td>
-      <button (click)="showAlert()">Show Alert</button>
-    </td>
-    <td>
-      <select (change)="cityChange()">
-        <option value="">Lucknow</option>
-        <option value="">Kanpur</option>
-        <option value="">Ghaziabad</option>
-        <option value="">Mathura</option>
-        <option value="">Mooradabad</option>
-        <option value="">Baraut</option>
-        <option value="">Hardoi</option>
-        <option value="">Kanpur Dehat</option>
-      </select>
-    </td>
-  </tr>
-</table>
+  <table style="width: 100%;">
+  </table>
+
+  <br>
+  <hr>
+
+  <table style="background-color: red;" (mouseenter)="onMouseEnter()">
+    <tr>
+      <td>
+        <button (click)='showAlert()'></button>
+      </td>
+      <td>
+        <select (change)="cityChange()">
+          <option value="">Lucknow</option>
+          <option value="">Meerut</option>
+          <option value="">Kanpur</option>
+        </select>
+       </td>
+    </tr>
+  </table>
+
+</div>
+
+
+

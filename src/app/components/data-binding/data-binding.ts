@@ -38,6 +38,15 @@ export class DataBinding {
     alert('You are changing the city')
   }
 
+  onscroll(){
+    console.log('on window size change')
+
+  }
+
+  onMouseEnter(){
+    console.log('mouse Inn')
+  }
+
 
     
 
