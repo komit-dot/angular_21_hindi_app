@@ -1,0 +1,27 @@
+<div (scroll)="onscroll()" style="height: 50px; overflow:screen;">
+
+  <table style="width: 100%;">
+  </table>
+
+  <br>
+  <hr>
+
+  <table style="background-color: red;" (mouseenter)="onMouseEnter()">
+    <tr>
+      <td>
+        <button (click)='showAlert()'></button>
+      </td>
+      <td>
+        <select (change)="cityChange()">
+          <option value="">Lucknow</option>
+          <option value="">Meerut</option>
+          <option value="">Kanpur</option>
+        </select>
+       </td>
+    </tr>
+  </table>
+
+</div>
+
+
+
