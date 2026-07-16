@@ -1,16 +1,18 @@
+<h1 class="secondary"> Data Binding Work</h1>
 <div (scroll)="onscroll()" style="height: 50px; overflow:screen;">
 
   <table style="width: 100%;">
+    <button> This is button of data binding</button>
   </table>
-
   <br>
-  <hr>
 
-  <table style="background-color: red;" (mouseenter)="onMouseEnter()">
+  <table >
     <tr>
       <td>
-        <button (click)='showAlert()'></button>
+        <button (click)='showAlert()'>Click on Me to show alert</button>
       </td>
+    </tr><br>
+    <tr style="background-color: red;" (mouseenter)="onMouseEnter()">
       <td>
         <select (change)="cityChange()">
           <option value="">Lucknow</option>

@@ -4,10 +4,10 @@ import { Component, signal } from '@angular/core';
   selector: 'app-signal',
   imports: [],
   templateUrl: './signal.html',
-  styleUrl: './signal.css',
+  //styleUrl: './signal.css',
 })
 export class Signal {
-  courseName: string = 'Angular';
+  courseName: string = 'Angular Signal Course';
 
   angularVersion = signal('20');
   courseDuration = signal<string>('2 Months');
