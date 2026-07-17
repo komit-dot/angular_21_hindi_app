@@ -1,0 +1,19 @@
+<h1 class="secondary"> Application Control Flow Work</h1>
+<div class="row">
+  <div class="col-3">
+    <select [(ngModel)]= 'selectedCaste' class="form-select">
+      <option> ABC City </option>
+      <option> DEF City</option>
+      <option> GHI City</option>
+      <option> Other City</option>
+    </select>
+  </div>
+  <div class = 'col-3'>
+    @if (selectedCaste=='Other City'){
+      <input type="text" class="form-control" placeholder="Mention Other city">
+    }
+
+  </div>
+
+
+</div>
