@@ -12,8 +12,27 @@
     @if (selectedCaste=='Other City'){
       <input type="text" class="form-control" placeholder="Mention Other city">
     }
+  </div>
+</div>
+
+<div class="row">
+  <div  class="col-4">
+    @if(isStudentActive() == true){
+      <span class="text-success">Student is active </span>
+    }
+    @else{
+      <span class="text-danger">Student is not active </span>
+    }
+
 
   </div>
 
+  <div class="col-4">
+    {{isStudentActive()}}
+    <button class="btn btn-success">Make Active</button>
+    <button class="btn btn-warning mx-2">Make De-active</button>
+
+
+  </div>
 
 </div>
