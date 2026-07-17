@@ -13,7 +13,9 @@ export class ControlFlow {
 
   isStudentActive = signal<boolean> (true)
 
-
+changeStatus(value: boolean){
+  this.isStudentActive.set(value)
+}
 
 
 
