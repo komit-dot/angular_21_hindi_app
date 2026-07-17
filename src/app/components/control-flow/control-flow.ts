@@ -12,10 +12,20 @@ export class ControlFlow {
   selectedCaste:string = '';
 
   isStudentActive = signal<boolean> (true)
+  changeStatus(value: boolean){
+    this.isStudentActive.set(value)
+  }
 
-changeStatus(value: boolean){
-  this.isStudentActive.set(value)
-}
+  cityList = ['Lucknow', 'Bangalore', 'Ahmedabad','Hyderabad']
+
+  studentList = [
+     {name:'aaa', age: 33, email: 'abc@gmail.com',status: true},
+     {name:'bbb', age: 33, email: 'abc@gmail.com',status: false},
+     {name:'ccc', age: 33, email: 'abc@gmail.com',status: false},
+     {name:'ddd', age: 33, email: 'abc@gmail.com',status: true}
+
+  ]
+
 
 
 
