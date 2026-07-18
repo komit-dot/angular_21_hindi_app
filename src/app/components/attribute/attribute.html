@@ -1,0 +1,45 @@
+<h2 class="secondary"> Ng Directive and Attribute Work!</h2>
+
+<div class="row" [ngStyle]="{color: textColor,'font-size': '      30px'}">
+  <div class="col-4" [ngClass]="themeClass">
+    <table class="table tablebordered table-success">
+      <thead>
+        <tr>
+          <th>Sr.Number</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Email</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of studentList; track $index) {
+          <tr >
+            <td [ngClass]="item.status == true ? 'bg-success': 'bg-danger'">{{$index + 1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.email}}</td>
+            <td [class]="item.status == true ? 'bg-success': 'bg-danger'">{{item.status}}</td>
+
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+    <div class="col-5" [ngClass]="themeClass">
+      <h3>Hello</h3>
+    </div>
+    <div [class]="'col-3 '+ themeBgClass">
+      <h3>Good Morning!</h3>
+    </div>
+
+</div>
+
+<hr>
+<hr>
+<div class="row">
+  <div class="col-3" [ngStyle]="myCss">
+    div11
+  </div>
+</div>
+
