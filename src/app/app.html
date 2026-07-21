@@ -1,10 +1,35 @@
-<h1>Hello Application</h1>
-<app-data-binding>Data binding works</app-data-binding>
-<br><br><br>
-<app-signal>App signal work</app-signal>
-<br><br>
-<app-user> App Users Work</app-user>
-<br><br>
-<app-admin>App Admin Work</app-admin>
-<app-control-flow> Application control Flow</app-control-flow>
-<app-attribute> </app-attribute>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/admin">Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/user">User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/controlflow">ControlFlow</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/data-binding">DataBinding</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLinkActive="active" routerLink="/signal">Signal</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLinkActive="active" routerLink="/attribute">Attribute Work</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<router-outlet> </router-outlet>
