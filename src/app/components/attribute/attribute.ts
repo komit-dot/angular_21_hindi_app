@@ -21,7 +21,7 @@ export class Attribute {
   myCss: any = {
     'background-color': 'green',
     'color': 'white',
-    'font-size': '80px'
+    'font-size': '40px'
 
 
   }
