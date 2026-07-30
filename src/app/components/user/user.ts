@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-user',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, AsyncPipe],
   templateUrl: './user.html',
   styleUrl: './user.css',
 })
@@ -14,14 +17,28 @@ export class User {
     password: new FormControl(''),
     fullName: new FormControl(''),
     mobileNo: new FormControl(''),
-
   });
 
-  onSaveUser(){
-    
-  }
-  
-    
-  
+  http = inject(HttpClient);
+  userList$: Observable<any[]>;
 
+  constructor(){
+    this.userList$ = this.http.get<any[]>
+    ('https://api.freeprojectapi.com/api/GoalTracker/getAllUsers')
+
+  }
+
+  onSaveUser() {
+    const formValue = this.userForm.value;
+    //debugger
+
+    this.http.post('https://api.freeprojectapi.com/api/GoalTracker/register', formValue).subscribe({
+      next: (response: any) => {
+        alert('User Created Success')
+      },
+      error: (error: any) => {
+        alert(error)
+      },
+    });
+  }
 }
