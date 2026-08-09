@@ -26,7 +26,7 @@
                       <p class="mb-2"><strong>Password:</strong> {{ item.password }}</p>
 
                       <div class="action-btns d-flex justify-content-between">
-                        <button class="btn btn-warning btn-sm">Edit</button>
+                        <button class="btn btn-warning btn-sm" (click)="onEdit(item)">Edit</button>
 
                         <button class="btn btn-danger btn-sm">Delete</button>
                       </div>
@@ -119,9 +119,8 @@
 
               <div class="d-grid gap-2">
                 <button class="btn btn-success" (click)="onSaveUser()">Save</button>
-
+                <button class="btn btn-success" (click)="onSaveUser()">Update Form</button>
                 <button class="btn btn-primary">Update User</button>
-
                 <button class="btn btn-secondary">Clear</button>
               </div>
             </form>

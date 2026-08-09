@@ -41,4 +41,15 @@ export class User {
       },
     });
   }
+
+  onEdit(data: any){
+    this.userForm = new FormGroup({
+      userId: new FormControl(data.userId),
+      emailId: new FormControl(data.emailId),
+      password: new FormControl(data.password),
+      fullName: new FormControl(data.fullName),
+      mobileNo: new FormControl(data.mobileNo),
+    });
+
+  }
 }
